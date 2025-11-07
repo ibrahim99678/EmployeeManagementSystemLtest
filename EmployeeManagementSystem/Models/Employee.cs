@@ -10,12 +10,17 @@
 
         public string Email { get; set; } = string.Empty;
 
-        public decimal Salary { get; set; }= 0;
+        public Salary Salary { get; set; }= new Salary();
 
         public DateTime HireDate { get; set; }= DateTime.Now;
 
-        public int DepartmentId { get; set; } 
+        public int DepartmentId { get; set; }
 
+        public string Designation { get; set; } = string.Empty;
         public Department Department { get; set; }= new Department();
+        public ICollection<Salary> Salaries { get; set; } 
+
+        //
     }
+
 }
